@@ -1,0 +1,40 @@
+.blogsTable {
+  display: table;
+  margin: 0 auto;
+  width: 550px;
+  max-width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 275px;
+}
+
+.blogsTable thead td {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.blogsTable td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+}
+
+.blogsTable th {
+  background-color: #f4f4f4;
+}
+
+.viewDel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.viewDel a {
+  color: dodgerblue;
+}
+
+.viewDel form {
+  cursor: pointer;
+  color: red;
+}
