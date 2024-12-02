@@ -4,10 +4,14 @@ import "../assets/styles/blogsTable.css";
 import FI from "feather-icons-react";
 import { deleteBlog } from "@/server-actions/actions";
 import { toast } from "react-toastify";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const BlogsTable = ({ blogs }) => {
   const [allBlogs, setAllBlogs] = useState(blogs);
+
+  useEffect(() => {
+    setAllBlogs(blogs);
+  }, [blogs]);
 
   const handleDelete = async (formData) => {
     if (!confirm("Do you want to delete the post?")) return;

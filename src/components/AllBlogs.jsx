@@ -6,10 +6,9 @@ import { useDebounce } from "use-debounce";
 const AllBlogs = ({ blogs }) => {
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   const [searchText, setSearchText] = useState("");
-  const [dbSearchText] = useDebounce(searchText, 1000);
+  const [dbSearchText] = useDebounce(searchText, 800);
 
   useEffect(() => {
-    console.log(dbSearchText);
     const searchedBlogs =
       dbSearchText === ""
         ? blogs
